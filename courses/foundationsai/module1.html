@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 1: Foundations of Artificial Intelligence</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background-color: #f4f9fc;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    .box {
+      background: white;
+      padding: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    .question {
+      margin: 1.5em 0;
+    }
+    label {
+      display: block;
+      margin: 0.5em 0;
+    }
+    .result {
+      margin-top: 1em;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .correct { color: green; }
+    .incorrect { color: red; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Module 1: Foundations of Artificial Intelligence</h1>
+    <p>This module introduces Artificial Intelligence (AI), its historical development, types, and real-world relevance—especially in Caribbean innovation sectors.</p>
+
+    <h2>What is Artificial Intelligence?</h2>
+    <p>AI refers to systems or machines that mimic human intelligence to perform tasks and can iteratively improve themselves based on the information they collect. These systems can include voice recognition, decision-making, translation, and more.</p>
+
+    <h2>A Brief History of AI</h2>
+    <ul>
+      <li><strong>1950s:</strong> Alan Turing proposes the Turing Test.</li>
+      <li><strong>1956:</strong> AI coined at the Dartmouth Conference.</li>
+      <li><strong>1970s–1980s:</strong> Expert systems and symbolic AI dominate.</li>
+      <li><strong>2000s–Present:</strong> Machine learning and deep learning expand due to big data and better computing power.</li>
+    </ul>
+
+    <h2>Types of AI</h2>
+    <ul>
+      <li><strong>Narrow AI:</strong> Performs a specific task (e.g., virtual assistants).</li>
+      <li><strong>General AI:</strong> Hypothetical human-like cognitive AI.</li>
+      <li><strong>Superintelligent AI:</strong> Theoretical future AI that surpasses human intelligence.</li>
+    </ul>
+
+    <h2>Applications of AI</h2>
+    <p>AI is already transforming industries:</p>
+    <ul>
+      <li>Chatbots for customer service</li>
+      <li>Fraud detection in finance</li>
+      <li>Self-driving vehicles</li>
+      <li>Recommendation engines (e.g., Netflix, YouTube)</li>
+      <li>In the Caribbean: climate monitoring, smart tourism, and disease detection</li>
+    </ul>
+
+    <h2>Knowledge Check (Passing Grade: 70%)</h2>
+    <form id="quizForm">
+      <div class="question">
+        <strong>1. Who introduced the idea of a machine that could simulate human thinking, known as the Turing Test?</strong>
+        <label><input type="radio" name="q1" value="incorrect"> Isaac Newton</label>
+        <label><input type="radio" name="q1" value="correct"> Alan Turing</label>
+        <label><input type="radio" name="q1" value="incorrect"> John McCarthy</label>
+        <label><input type="radio" name="q1" value="incorrect"> Elon Musk</label>
+      </div>
+
+      <div class="question">
+        <strong>2. When was the term "Artificial Intelligence" officially coined?</strong>
+        <label><input type="radio" name="q2" value="correct"> 1956</label>
+        <label><input type="radio" name="q2" value="incorrect"> 1945</label>
+        <label><input type="radio" name="q2" value="incorrect"> 1980</label>
+        <label><input type="radio" name="q2" value="incorrect"> 1999</label>
+      </div>
+
+      <div class="question">
+        <strong>3. What type of AI is responsible for things like voice assistants and spam filters?</strong>
+        <label><input type="radio" name="q3" value="correct"> Narrow AI</label>
+        <label><input type="radio" name="q3" value="incorrect"> General AI</label>
+        <label><input type="radio" name="q3" value="incorrect"> Super AI</label>
+        <label><input type="radio" name="q3" value="incorrect"> Ethical AI</label>
+      </div>
+
+      <div class="question">
+        <strong>4. Which of the following is a real-world application of AI?</strong>
+        <label><input type="radio" name="q4" value="correct"> Chatbots</label>
+        <label><input type="radio" name="q4" value="incorrect"> Pencil sharpeners</label>
+        <label><input type="radio" name="q4" value="incorrect"> Windmills</label>
+        <label><input type="radio" name="q4" value="incorrect"> Alarm clocks</label>
+      </div>
+
+      <div class="question">
+        <strong>5. What is one way AI is being used in the Caribbean?</strong>
+        <label><input type="radio" name="q5" value="correct"> Climate monitoring</label>
+        <label><input type="radio" name="q5" value="incorrect"> Cotton production</label>
+        <label><input type="radio" name="q5" value="incorrect"> Manual bookkeeping</label>
+        <label><input type="radio" name="q5" value="incorrect"> Candle making</label>
+      </div>
+
+      <button type="button" onclick="gradeQuiz()">Submit Answers</button>
+      <div id="result" class="result"></div>
+    </form>
+    <a href="intro-to-ai.html">← Back to Course Overview</a>
+  </div>
+
+  <script>
+    function gradeQuiz() {
+      const form = document.forms['quizForm'];
+      let correct = 0;
+      const total = 5;
+      for (let i = 1; i <= total; i++) {
+        const q = form['q' + i];
+        const selected = [...q].find(r => r.checked);
+        if (selected && selected.value === 'correct') {
+          correct++;
+        }
+      }
+      const score = (correct / total) * 100;
+      const result = document.getElementById("result");
+      if (score >= 70) {
+        result.innerHTML = `<span class="correct">✅ You passed! Score: ${score.toFixed(0)}%</span>`;
+      } else {
+        result.innerHTML = `<span class="incorrect">❌ Try again. Score: ${score.toFixed(0)}%</span>`;
+      }
+    }
+  </script>
+</body>
+</html>
