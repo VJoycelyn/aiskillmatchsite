@@ -89,7 +89,11 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
+    # Save this to a reusable HTML fragment
+logo_path = "/mnt/data/header_with_clickable_logo.html"
+Path(logo_path).write_text(logo_html)
     <div class="hero">
+
         <h1>Empowering Workers with New Skills</h1>
         <p>Our platform connects workers at risk of displacement with AI training opportunities to build new careers.</p>
         <a class="button" href="#">Get Started</a>
