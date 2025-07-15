@@ -2,50 +2,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Courses – AISkillMatch</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Courses – AISkillMatch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fb;
+    }
+    header {
+      background: #00264d;
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+      margin-top: 1.5em;
+    }
+    .course-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      padding: 2em;
+    }
+    .course {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5em;
+      width: 280px;
+    }
+    .course h3 {
+      color: #007acc;
+      margin-top: 0;
+    }
+    .course p {
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">AISkillMatch</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="courses.html">Courses</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section class="page-header">
-            <h1>Explore Our Courses</h1>
-            <p>Practical, AI-powered training to help you thrive in the digital economy.</p>
-        </section>
-        <section class="course-list">
-            <div class="course">
-                <h3>🌐 Digital Literacy for Beginners</h3>
-                <p>Build foundational tech skills including browser use, email, and basic apps.</p>
-            </div>
-            <div class="course">
-                <h3>🤖 Introduction to AI & Machine Learning</h3>
-                <p>Understand AI concepts and their real-world applications across industries.</p>
-            </div>
-            <div class="course">
-                <h3>💻 Remote Work Essentials</h3>
-                <p>Learn to use collaboration tools, manage time, and work productively online.</p>
-            </div>
-            <div class="course">
-                <h3>🔐 Data Privacy & Digital Rights</h3>
-                <p>Know your digital rights, protect your data, and understand consent in AI systems.</p>
-            </div>
-            <div class="course">
-                <h3>📊 AI Tools for Small Businesses</h3>
-                <p>Discover how AI can optimize marketing, operations, and customer service.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 AISkillMatch | All rights reserved.
-    </footer>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="AISkillMatch Logo" style="height:40px;">
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h1>Our AI-Powered Training Courses</h1>
+  <div class="course-grid">
+    <div class="course">
+      <h3>Intro to AI & Machine Learning</h3>
+      <p>Understand foundational AI concepts, models, and real-world use cases.</p>
+    </div>
+    <div class="course">
+      <h3>AI for Small Business Growth</h3>
+      <p>Learn how to apply AI to streamline operations, marketing, and support.</p>
+    </div>
+    <div class="course">
+      <h3>Responsible AI & Ethics</h3>
+      <p>Explore the ethical concerns of AI and how to build fair, inclusive systems.</p>
+    </div>
+    <div class="course">
+      <h3>Data Privacy in the Digital Age</h3>
+      <p>Understand digital rights, consent, and protecting personal data.</p>
+    </div>
+    <div class="course">
+      <h3>Remote Work & Digital Skills</h3>
+      <p>Master virtual collaboration tools, time management, and communication online.</p>
+    </div>
+    <div class="course">
+      <h3>AI Tools for Content Creators</h3>
+      <p>Use AI to enhance writing, video editing, and digital media production.</p>
+    </div>
+  
+<div class="course">
+  <h3>AI for Caribbean Climate & Tourism</h3>
+  <p>Discover how AI is used to manage climate risk, optimize tourism, and support economic development in Caribbean nations.</p>
+</div>
+
+  
+<div class="course">
+  <h3>AI in Caribbean Healthcare Systems</h3>
+  <p>Learn how AI supports health diagnostics, patient care, and disease monitoring in Caribbean public health infrastructure.</p>
+</div>
+
+  </div>
 </body>
 </html>
